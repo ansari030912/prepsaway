@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 const CustomCaresolTestEngine = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const slides = [
-    "/test-engine/slide1_optimized.png",
+    "/test-engine/slide_optimized.png",
     "/test-engine/slide2_optimized.png",
     "/test-engine/slide3_optimized.png",
     "/test-engine/slide4_optimized.png",
