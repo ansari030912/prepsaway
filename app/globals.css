@@ -1,0 +1,414 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom-scrollbar.css */
+
+/* Hide the default scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0; /* Set width to 0 to hide the scrollbar */
+  height: 0;
+}
+
+/* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  width: 0; /* Set width to 0 to hide the scrollbar */
+  height: 0;
+}
+
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: transparent; /* Set background color to transparent */
+  width: 0; /* Set width to 0 to hide the scrollbar */
+  height: 0;
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: transparent; /* Set background color to transparent */
+  width: 0; /* Set width to 0 to hide the scrollbar */
+  height: 0;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 1s ease-in-out forwards;
+  opacity: 1;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  animation: slide 30s linear infinite; /* Ultra fast animation speed */
+}
+
+.carousel-slide {
+  min-height: 150px;
+  flex-shrink: 0;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .carousel-slide {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .carousel-slide {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-slide {
+    width: 100%;
+  }
+}
+
+.review-card {
+  padding: 1.5rem;
+  height: 100%;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Scrool To Top */
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+/* styles.css or global.css */
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.scroll-to-top-button {
+  background-color: #25c660;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  transition: opacity 0.4s;
+}
+
+.scroll-to-top-button:hover {
+  background-color: #16a34a;
+}
+
+/* styles/globals.css */
+.scroll-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.scroll-bar {
+  height: 5px;
+  background-color: #25c660;
+  transition: width 0.1.7s ease-in-out;
+}
+
+/* Undeline Blogs Heading */
+
+/* Blog Content Styling */
+.blog-content {
+  font-family: "Inter", sans-serif;
+}
+
+/* Headings */
+.blog-content h1,
+.blog-content h2,
+.blog-content h3 {
+  margin-bottom: 1rem;
+  color: #374151;
+  font-weight: 700;
+}
+
+.blog-content h1 {
+  font-size: 1.95rem; /* text-3xl */
+  line-height: 2rem;
+  margin-top: 25px;
+}
+
+.blog-content h2 {
+  font-size: 1.85rem; /* text-2xl */
+  line-height: 1.75rem;
+  margin-top: 25px;
+}
+
+.blog-content h3 {
+  font-size: 1.75rem; /* text-xl */
+  line-height: 1.5rem;
+  margin-top: 25px;
+}
+
+/* Paragraphs */
+.blog-content p {
+  margin-bottom: 0.2rem;
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  color: #6b7280;
+}
+
+/* Lists */
+.blog-content ul,
+.blog-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  color: #999da3;
+}
+
+.blog-content ul {
+  list-style-type: disc;
+}
+
+.blog-content ol {
+  list-style-type: decimal;
+}
+
+.blog-content li {
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+}
+
+/* Links */
+.blog-content a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.blog-content a:hover {
+  text-decoration: underline;
+  color: #2563eb;
+}
+
+/* Blockquotes */
+.blog-content blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #22c55e;
+  background-color: #f9fafb;
+  font-size: 1.125rem;
+  color: #374151;
+  font-style: italic;
+}
+
+/* Borders (optional) */
+.blog-content .border-b {
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Images inside content */
+.blog-content img {
+  max-width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+}
+
+/* Tables */
+.blog-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+}
+
+.blog-content table th,
+.blog-content table td {
+  border: 1px solid #e5e7eb; /* Light gray border */
+  padding: 0.75rem 1rem; /* Padding for table cells */
+  text-align: left;
+  color: #374151; /* Dark gray text */
+}
+
+.blog-content table th {
+  background-color: #f3f4f6; /* Light gray background */
+  font-weight: 600; /* Semi-bold */
+  color: #1f2937; /* Darker gray text for headings */
+}
+
+.blog-content table tr:nth-child(even) {
+  background-color: #f9fafb; /* Very light gray for zebra striping */
+}
+
+.blog-content table tr:hover {
+  background-color: #f1f5f9; /* Slightly darker light gray on hover */
+}
+
+/* Images inside content */
+.blog-content img {
+  max-width: 100%;
+  margin: 1.5rem auto; /* Add auto margins to center images */
+  display: block; /* Ensure images are block-level to respect margin */
+  border-radius: 0.5rem; /* Optional: Rounded corners for images */
+  padding-bottom: 20px;
+}
+/* Headings */
+.blog-content h4 {
+  margin-top: 1.5rem; /* Adds top margin for spacing */
+  margin-bottom: 1rem; /* Keeps the bottom margin consistent with other headings */
+  font-size: 1.5rem; /* text-lg */
+  line-height: 1.75rem; /* Maintain good readability */
+  font-weight: 600; /* Semi-bold for emphasis */
+  color: #22c55e; /* Green color */
+}
+
+/* Blog Content Styling */
+.article {
+  font-family: "Inter", sans-serif; /* Primary font */
+}
+
+/* Headings */
+.article h1,
+.article h2,
+.article h3 {
+  margin-bottom: 1rem;
+  color: #374151;
+  font-weight: 700;
+  font-family: "Inter", sans-serif; /* Consistent font for headings */
+}
+
+.article h1 {
+  font-size: 1.875rem; /* text-3xl */
+  line-height: 2rem;
+  /* margin-top: 20px; */
+}
+
+.article h2 {
+  font-size: 1.5rem; /* text-2xl */
+  line-height: 1.75rem;
+  margin-top: 20px;
+}
+
+.article h3 {
+  font-size: 1.25rem; /* text-xl */
+  line-height: 1.5rem;
+  margin-top: 20px;
+}
+
+/* Paragraphs */
+.article p {
+  margin-bottom: 0.2rem;
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  color: #6b7280;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Lists */
+.article ul,
+.article ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  color: #999da3;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.article ul {
+  list-style-type: disc;
+}
+
+.article ol {
+  list-style-type: decimal;
+}
+
+.article li {
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem; /* text-lg */
+  line-height: 1.75rem;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Links */
+.article a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.article a:hover {
+  text-decoration: underline;
+  color: #2563eb;
+}
+
+/* Blockquotes */
+.article blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid #22c55e;
+  background-color: #f9fafb;
+  font-size: 1.125rem;
+  color: #374151;
+  font-style: italic;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Borders (optional) */
+.article .border-b {
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+/* Images inside content */
+.article img {
+  max-width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+}
